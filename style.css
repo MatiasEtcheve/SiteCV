@@ -1,0 +1,247 @@
+:root {
+    --main-color: #68b0ab;
+    --light-color: #ecf4f3;
+    --dark-color: #006a71;
+    --red-text: #ff4e4e;
+    --main-font-size: calc(6px + 1.3vw);
+    --title-font-size: calc(10px + 1.5vw);
+    --subtitle-font-size: calc(10px + 1.3vw);
+}
+
+@font-face {
+    font-family: 'league-spartan';
+    src: url('fonts/league-spartan/LeagueSpartan-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/raleway/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'calligraffiti';
+    src: url('fonts/calligraffiti/DancingScript-Regular.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--main-color);
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.flag {
+    width: calc(20px + 2vw);
+    margin-top: calc(2px + 0.3vw);
+    margin-right: calc(2px + 0.5vw);
+}
+
+
+/* .card {
+    background: var(--main-color);
+    border: none;
+    border-radius: 0%;
+} */
+
+.card {
+    border: none;
+}
+
+.card-header,
+.card-footer,
+.card-body {
+    border: none;
+    background-color: var(--light-color);
+    border-radius: 0;
+}
+
+.card-header {
+    padding-top: 7vw;
+    padding-bottom: 0%;
+    font-size: calc(10px + 3vw);
+    font-family: league-spartan;
+}
+
+.card-body {
+    font-size: calc(6px + 1.8vw);
+    padding-top: 1vw;
+    padding-bottom: 0%;
+    /* font-family: league-spartan; */
+}
+
+.card-footer {
+    padding-bottom: 1vw;
+    font-size: calc(6px + 1.8vw);
+}
+
+.nav-wrapper,
+.navbar {
+    line-height: calc(8px + 1vw);
+    height: calc(15px + 3vw);
+    font-size: var(--main-font-size);
+    /* font-size: calc(1px + 1.8vw); */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+}
+
+#a_propos,
+#competence,
+#experience,
+#interest,
+#contact,
+#copyright {
+    background: var(--light-color);
+    font-size: var(--main-font-size);
+    margin-top: calc(2px + 0.3vw);
+    padding-top: calc(10px + 3vw);
+    padding-bottom: calc(10px + 3vw);
+    padding-right: calc(10px + 3vw);
+    padding-left: calc(10px + 3vw);
+}
+
+#contact {
+    padding-bottom: calc(15px + 5vw);
+}
+
+#copyright {
+    background: #263238;
+    color: var(--light-color);
+}
+
+#a_propos h4 {
+    font-size: var(--subtitle-font-size);
+    color: var(--red-text);
+}
+
+h2 {
+    font-size: var(--title-font-size);
+    color: var(--red-text);
+}
+
+.logo {
+    color: var(--dark-color);
+    font-size: 5vw;
+    display: table;
+    margin: 0 auto;
+}
+
+#bloc_formations_experiences {
+    border-left: 3px solid var(--light-color);
+}
+
+.experience .sujet {
+    border-left: 3px solid var(--dark-color);
+    margin-left: -3px;
+    padding-left: 2vw;
+    color: var(--dark-color);
+    font-size: var(--main-font-size);
+    font-weight: bold;
+}
+
+.experience .societe {
+    font-weight: bold;
+    padding-left: 2vw;
+}
+
+.experience .description {
+    padding-left: 2vw;
+}
+
+.experience .lieu {
+    font-size: var(--main-font-size);
+    text-align: right;
+    padding-right: 2vw;
+}
+
+.experience .date {
+    font-style: italic;
+    text-align: right;
+    padding-right: 2vw;
+}
+
+.formation .sujet {
+    border-right: 3px solid var(--red-text);
+    margin-right: -3px;
+    padding-right: 2vw;
+    color: var(--red-text);
+    font-size: var(--main-font-size);
+    font-weight: bold;
+    text-align: right;
+}
+
+.formation .societe {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 2vw;
+}
+
+.formation .description {
+    padding-right: 2vw;
+    text-align: right;
+}
+
+.formation .lieu {
+    font-size: var(--main-font-size);
+    padding-left: 2vw;
+}
+
+.formation .date {
+    font-style: italic;
+    padding-left: 2vw;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    font-size: var(--main-font-size);
+}
+
+.btn-default:focus {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #8c8c8c;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn-default:active {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+
+/* [class*="col-"] {
+    display: table-cell;
+    background-color: lightgreen;
+    border: 2px solid black;
+    border-radius: 6px;
+} */
